@@ -1,0 +1,60 @@
+{
+  "name": "react-trailer",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.8",
+    "lerna": "^3.17.0",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "styled-components": "^4.4.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna bootstrap && lerna run build",
+    "lint": "lerna run lint",
+    "start": "lerna run start --scope react-trailer-demo",
+    "postinstall": "lerna bootstrap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillem Aldeguer Lima <guillem.aldeguer@gmail.com> (https://naimikan.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naimikan/react-trailer/issues"
+  },
+  "homepage": "https://github.com/Naimikan/react-trailer#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --verbose"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
