@@ -4,7 +4,13 @@ import styled from 'styled-components';
 
 import { useVideoRef, useVideoId } from '../../hooks';
 
-const UnstyledVideoViewer = React.forwardRef(({ className, url }, ref) => {
+const UnstyledVideoViewer = React.forwardRef(({
+  autoplay,
+  loop,
+  className,
+  url,
+  children,
+}, ref) => {
   const id = useVideoId();
   const [videoRef] = useVideoRef(id);
 
@@ -16,24 +22,42 @@ const UnstyledVideoViewer = React.forwardRef(({ className, url }, ref) => {
     }
   }
 
+  const srcAttibutte = url && {
+    src: url,
+  };
+
   return (
     <video // eslint-disable-line jsx-a11y/media-has-caption
       className={`rtr-viewer ${className}`}
+      autoPlay={autoplay}
+      loop={loop}
       ref={ref}
-      src={url}
+      {...srcAttibutte}
       preload="metadata"
       onClick={onClick}
-    />
+    >
+      {children}
+    </video>
   );
 });
 
+UnstyledVideoViewer.Source = styled.source``;
+
 UnstyledVideoViewer.propTypes = {
+  autoplay: PropTypes.bool,
+  loop: PropTypes.bool,
   className: PropTypes.string,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
+  // ToDo: custom validator
+  children: PropTypes.node,
 };
 
 UnstyledVideoViewer.defaultProps = {
+  autoplay: false,
+  loop: false,
   className: '',
+  url: '',
+  children: null,
 };
 
 const VideoViewer = styled(UnstyledVideoViewer)`

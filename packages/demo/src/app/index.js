@@ -46,7 +46,12 @@ const StyledVideoPlayer = styled(VideoPlayer)`
 const App = () => (
   <div>
     <StyledVideoPlayer>
-      <VideoViewer url="https://vjs.zencdn.net/v/oceans.mp4" />
+      <VideoViewer autoplay loop>
+        <VideoViewer.Source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm" /> 
+        <VideoViewer.Source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg" /> 
+        <VideoViewer.Source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
+        <VideoViewer.Source src="http://techslides.com/demos/sample-videos/small.3gp" type="video/3gp" />
+      </VideoViewer>
       <VideoControls>
         <StyledVideoProgress />
         <StyledControlsContent>
