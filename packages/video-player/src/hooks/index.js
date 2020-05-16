@@ -4,24 +4,21 @@ import { getVideoRefById } from '../helpers';
 
 import VideoContext from '../context';
 
-const useVideoRef = (id) => {
-  const videoRefById = getVideoRefById(id);
-  const [ref, setRef] = useState(videoRefById.current);
-
-  useEffect(() => {
-    setRef(videoRefById.current);
-  }, [videoRefById]);
-
-  return [ref, setRef];
-};
-
-const useVideoId = () => {
+const useVideo = () => {
   const { id: videoId } = useContext(VideoContext);
+  const videoRefById = getVideoRefById(videoId);
 
-  return videoId;
+  console.log(videoRefById);
+  // const [ref, setRef] = useState(videoRefById.current);
+
+  // useEffect(() => {
+  //   console.log(videoRefById, videoRefById.current);
+  //   setRef(videoRefById.current);
+  // }, [videoRefById]);
+
+  // return [ref, setRef];
 };
 
 export {
-  useVideoId,
-  useVideoRef,
+  useVideo,
 };

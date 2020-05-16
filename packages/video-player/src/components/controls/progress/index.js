@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { useVideoRef, useVideoId } from '../../../hooks';
+import { useVideo } from '../../../hooks';
 
 const ProgressContainer = styled.span.attrs({
   className: 'rtr-progress-control__container',
@@ -21,8 +21,7 @@ const ProgressBar = styled.span.attrs(({ progress }) => ({
 
 const UnstyledProgress = ({ className }) => {
   const [currentProgress, setProgress] = useState(0);
-  const id = useVideoId();
-  const [videoRef] = useVideoRef(id);
+  const [videoRef] = useVideo();
 
   if (videoRef) {
     videoRef.addEventListener('timeupdate', () => {

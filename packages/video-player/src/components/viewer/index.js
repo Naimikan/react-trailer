@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { useVideoRef, useVideoId } from '../../hooks';
+import { useVideo } from '../../hooks';
 
 const UnstyledVideoViewer = React.forwardRef(({
   autoplay,
@@ -11,8 +11,7 @@ const UnstyledVideoViewer = React.forwardRef(({
   url,
   children,
 }, ref) => {
-  const id = useVideoId();
-  const [videoRef] = useVideoRef(id);
+  const [videoRef] = useVideo();
 
   const onClick = () => {
     if (videoRef.paused) {

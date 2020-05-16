@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { useVideoRef, useVideoId } from '../../../hooks';
+import { useVideo } from '../../../hooks';
 
 const PlayPause = () => {
-  const id = useVideoId();
-  const [videoRef] = useVideoRef(id);
+  const [videoRef] = useVideo();
 
   const [isPaused, setIsPaused] = useState(true);
 
@@ -24,8 +23,7 @@ const PlayPause = () => {
 };
 
 const UnstyledVideoPlayPause = ({ className }) => {
-  const id = useVideoId();
-  const [videoRef] = useVideoRef(id);
+  const [videoRef] = useVideo();
 
   const handler = () => {
     if (videoRef.paused) {
