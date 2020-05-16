@@ -1,13 +1,19 @@
 import VideoPlayer from './components/player';
-import VideoViewer from './components/viewer';
-import VideoControls from './components/controls';
-import VideoPlayPause from './components/controls/play-pause';
-import VideoProgress from './components/controls/progress';
+import VideoConsumer from './components/consumer';
+import Viewer from './components/viewer';
+import Controls from './components/controls';
+import PlayButton from './components/controls/play-button';
+import FullscreenButton from './components/controls/fullscreen-button';
+import ProgressControl from './components/controls/progress';
+import DurationControl from './components/controls/duration';
 
 export {
   VideoPlayer,
-  VideoViewer,
-  VideoControls,
-  VideoPlayPause,
-  VideoProgress,
+  VideoConsumer,
+  Viewer,
+  Controls,
+  PlayButton,
+  FullscreenButton,
+  ProgressControl,
+  DurationControl,
 };
