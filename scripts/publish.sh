@@ -12,7 +12,7 @@ fi
 
 if [ $CURRENT_BRANCH == 'master' ]
 then
-  lerna publish --conventional-commits --yes
+  lerna publish --conventional-commits
 fi
 
 # Commit changes of publish
