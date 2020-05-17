@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import useVideoRef from '../../../hooks/use-video-ref';
-import useFullscreenMode from '../../../hooks/use-fullscreen-mode'
+import useFullscreenMode from '../../../hooks/use-fullscreen-mode';
 
 const FullscreenButton = ({ className, children }) => {
   const [videoRef] = useVideoRef();

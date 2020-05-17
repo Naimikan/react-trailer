@@ -1,25 +1,9 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import { ProgressContainer, ProgressBar } from './sub-components';
 
 import useVideoRef from '../../../hooks/use-video-ref';
-
-const ProgressContainer = styled.span.attrs({
-  className: 'rtr-progress-control__container',
-})`
-  display: flex;
-  overflow: hidden;
-  height: 8px;
-  background-color: #E1E4E8;
-`;
-
-const ProgressBar = styled.span.attrs(({ progress }) => ({
-  className: 'rtr-progress-control__bar',
-  style: { width: `${progress}%` },
-}))`
-  background-color: #f42003;
-
-  transition: width 100ms linear;
-`;
 
 const ProgressControl = ({ className }) => {
   const [currentProgress, setProgress] = useState(0);
@@ -39,6 +23,14 @@ const ProgressControl = ({ className }) => {
       </ProgressContainer>
     </div>
   );
+};
+
+ProgressControl.propTypes = {
+  className: PropTypes.string,
+};
+
+ProgressControl.defaultProps = {
+  className: '',
 };
 
 export default ProgressControl;

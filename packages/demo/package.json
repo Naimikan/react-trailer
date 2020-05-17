@@ -11,6 +11,6 @@
   "author": "Guillem Aldeguer Lima <guillem.aldeguer@gmail.com> (https://naimikan.github.io/)",
   "license": "ISC",
   "devDependencies": {
-    "react-trailer": "0.0.0"
+    "react-trailer": "^0.1.1"
   }
 }

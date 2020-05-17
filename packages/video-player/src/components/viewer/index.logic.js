@@ -29,7 +29,7 @@ const Viewer = ({
     } else {
       videoRef.pause();
     }
-  }
+  };
 
   const srcAttibutte = url && {
     src: url,
@@ -48,7 +48,7 @@ const Viewer = ({
       onDoubleClick={toggleFullscreen}
     >
       {children}
-    </video>  
+    </video>
   );
 };
 

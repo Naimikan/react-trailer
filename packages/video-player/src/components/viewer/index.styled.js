@@ -4,8 +4,8 @@ import LogicViewer from './index.logic';
 
 const Viewer = styled(LogicViewer)`
   display: inline-block;
-  width: 100%;
   height: 100%;
+  width: 100%;
 `;
 
 Viewer.propTypes = LogicViewer.propTypes;

@@ -5,12 +5,14 @@ import LogicVideoPlayer from './index.logic';
 
 const VideoPlayer = styled(LogicVideoPlayer)`
   background-color: #333;
-  display: block;
   box-sizing: border-box;
+  display: block;
   position: relative;
   
-  width: ${({ width }) => `${width}px`};
-  height: ${({ height }) => `${height}px`};
+  ${({ height, width }) => `
+    height: ${height}px;
+    width: ${width}px;
+  `}
 `;
 
 VideoPlayer.propTypes = {

@@ -14,7 +14,7 @@ const PlayButton = ({ className, children }) => {
       videoRef.addEventListener('play', () => {
         setIsPlaying(true);
       });
-  
+
       videoRef.addEventListener('pause', () => {
         setIsPlaying(false);
       });

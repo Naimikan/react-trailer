@@ -5,7 +5,7 @@ import VideoContext from '../../context';
 
 const VideoPlayer = React.forwardRef(({
   className,
-  children
+  children,
 }, ref) => (
   <VideoContext.Provider value={useState()}>
     <div ref={ref} className={`rtr-player ${className}`}>
