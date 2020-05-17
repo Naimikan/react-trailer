@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/Naimikan/react-trailer/compare/react-trailer@0.1.0...react-trailer@0.1.1) (2020-05-17)
+
+
+### Bug Fixes
+
+* fix ([47b95be](https://github.com/Naimikan/react-trailer/commit/47b95becf457c1857e8b7e32162b27c9e04fb034))
+* fix ([979d45f](https://github.com/Naimikan/react-trailer/commit/979d45f660588ab63ef535e402ce237ead010907))
+* fix ([8acbb2d](https://github.com/Naimikan/react-trailer/commit/8acbb2d14c5d4f52a5ba086a0dd9faec1a69063f))
+
+
+
+
+
 # 0.1.0-beta.0 (2020-05-17)
 
 
