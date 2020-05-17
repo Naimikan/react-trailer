@@ -3,7 +3,7 @@ set -e
 
 CURRENT_BRANCH=($(git branch --show-current))
 
-cp -f ../README.md ../packages/video-player/README.md
+cp -f ./README.md ./packages/video-player/README.md
 
 if [ $CURRENT_BRANCH == 'development' ]
 then
