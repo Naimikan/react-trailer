@@ -15,17 +15,13 @@ then
   lerna publish --conventional-commits --yes
 fi
 
-# # Commit changes of publish
-# git add .
-# git commit -am "chore: post-publish"
-# git push origin $CURRENT_BRANCH
-
 # Update development with master
 if [ $CURRENT_BRANCH == 'master' ]
 then
   git checkout development
   git fetch --all
   git reset --hard origin/$CURRENT_BRANCH
+  git push
 fi
 
 # Update master with development
@@ -35,6 +31,7 @@ then
   git fetch --all
   git fetch --all
   git reset --hard origin/$CURRENT_BRANCH
+  git push
 fi
 
 # Return to the current branch
