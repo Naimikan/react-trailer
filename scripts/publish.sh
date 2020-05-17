@@ -12,10 +12,24 @@ fi
 
 if [ $CURRENT_BRANCH == 'master' ]
 then
-  lerna publish --conventional-commits
+  lerna publish --conventional-commits --yes
 fi
 
 # Commit changes of publish
 git add .
 git commit -am "chore: post-publish"
 git push origin $CURRENT_BRANCH
+
+# Update development with master
+if [ $CURRENT_BRANCH == 'master' ]
+then
+  git checkout development
+  git pull origin $CURRENT_BRANCH
+fi
+
+# Update master with development
+if [ $CURRENT_BRANCH == 'development' ]
+then
+  git checkout master
+  git pull origin $CURRENT_BRANCH
+fi
