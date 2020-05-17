@@ -12,3 +12,8 @@ if [ $CURRENT_BRANCH == 'master' ]
 then
   lerna publish --conventional-commits --yes
 fi
+
+# Commit changes of publish
+git add .
+git commit -am "chore: post-publish"
+git push origin $CURRENT_BRANCH
