@@ -1,6 +1,6 @@
 {
   "name": "react-trailer",
-  "version": "0.0.1-beta.8+5476590",
+  "version": "0.0.1-beta.16+6e05d75",
   "description": "VideoPlayer component for React",
   "main": "dist/index.js",
   "files": [
@@ -25,5 +25,5 @@
   },
   "author": "Guillem Aldeguer Lima <guillem.aldeguer@gmail.com> (https://naimikan.github.io/)",
   "license": "ISC",
-  "gitHead": "547659075ab2e5651c430f5c8e159e4cc224c9c4"
+  "gitHead": "6e05d75959fff30d1dd7532a7768b02bf32cca6d"
 }
