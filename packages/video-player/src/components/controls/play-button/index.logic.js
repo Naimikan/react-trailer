@@ -9,6 +9,7 @@ const PlayButton = ({ className, children }) => {
 
   const childrenToRender = children && children.constructor === Function ? children : () => children;
 
+
   useEffect(() => {
     if (videoRef) {
       videoRef.addEventListener('play', () => {
