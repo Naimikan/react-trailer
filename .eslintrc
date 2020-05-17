@@ -1,0 +1,88 @@
+{
+  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "better-styled-components",
+    "react-hooks",
+    "jsdoc"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    // jsdoc
+    "jsdoc/check-alignment": 1, // Recommended
+    "jsdoc/check-examples": 1,
+    "jsdoc/check-indentation": 1,
+    "jsdoc/check-param-names": 1, // Recommended
+    "jsdoc/check-syntax": 1,
+    "jsdoc/check-tag-names": 1, // Recommended
+    "jsdoc/check-types": 1, // Recommended
+    "jsdoc/implements-on-classes": 1, // Recommended
+    "jsdoc/match-description": 1,
+    "jsdoc/newline-after-description": 1, // Recommended
+    "jsdoc/no-types": 0,
+    "jsdoc/no-undefined-types": 1, // Recommended
+    "jsdoc/require-description": 1,
+    "jsdoc/require-description-complete-sentence": 1,
+    "jsdoc/require-example": 1,
+    "jsdoc/require-hyphen-before-param-description": 1,
+    "jsdoc/require-jsdoc": 1, // Recommended
+    "jsdoc/require-param": 1, // Recommended
+    "jsdoc/require-param-description": 1, // Recommended
+    "jsdoc/require-param-name": 1, // Recommended
+    "jsdoc/require-param-type": 1, // Recommended
+    "jsdoc/require-returns": 1, // Recommended
+    "jsdoc/require-returns-check": 1, // Recommended
+    "jsdoc/require-returns-description": 1, // Recommended
+    "jsdoc/require-returns-type": 1, // Recommended
+    "jsdoc/valid-types": 1, // Recommended
+    // Import
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "packages": "always"
+      }
+    ],
+    // React
+    "react/no-array-index-key": 0,
+    "react/jsx-fragments": [2, "element"],
+    "react/jsx-props-no-spreading": [1, { "custom": "ignore" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react/prefer-stateless-function": 0,
+    "react/button-has-type": 0,
+    "react/no-danger": 0,
+    "react/no-typos": 0,
+    // React hooks
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    // Better styled components
+    "better-styled-components/sort-declarations-alphabetically": 2,
+    // a11y
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    // Others
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+    "class-methods-use-this": 0,
+    "linebreak-style": 0,
+    "max-len": ["error", 250, 2, { "ignoreComments": true }],
+    "no-underscore-dangle": 0,
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": { "minProperties": 6, "multiline": true, "consistent": true },
+        "ObjectPattern": { "minProperties": 6, "multiline": true, "consistent": true }
+      }
+    ]
+  }
+}
