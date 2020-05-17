@@ -36,3 +36,6 @@ then
   git fetch --all
   git reset --hard origin/$CURRENT_BRANCH
 fi
+
+# Return to the current branch
+git checkout $CURRENT_BRANCH
