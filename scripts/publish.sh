@@ -24,12 +24,15 @@ fi
 if [ $CURRENT_BRANCH == 'master' ]
 then
   git checkout development
-  git pull origin $CURRENT_BRANCH
+  git fetch --all
+  git reset --hard origin/$CURRENT_BRANCH
 fi
 
 # Update master with development
 if [ $CURRENT_BRANCH == 'development' ]
 then
   git checkout master
-  git pull origin $CURRENT_BRANCH
+  git fetch --all
+  git fetch --all
+  git reset --hard origin/$CURRENT_BRANCH
 fi
