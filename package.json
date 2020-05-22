@@ -10,7 +10,6 @@
     "release": "standard-version -a",
     "postrelease": "run-s release:*",
     "release:tags": "git push --follow-tags origin master",
-    "release:github": "conventional-github-releaser -p angular",
     "prepublishOnly": "npm run build"
   },
   "repository": {
