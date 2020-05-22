@@ -2,5 +2,18 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "changed": {
+      "ignoreChanges": ["CHANGELOG.md"]
+    },
+    "publish": {
+      "message": "chore: publish",
+      "ignoreChanges": ["CHANGELOG.md"]
+    },
+    "version": {
+      "message": "chore: version",
+      "ignoreChanges": ["CHANGELOG.md"]
+    }
+  }
 }
