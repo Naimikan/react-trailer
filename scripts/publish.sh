@@ -14,8 +14,3 @@ if [ $CURRENT_BRANCH == 'master' ]
 then
   lerna publish --conventional-commits --yes
 fi
-
-## Commit changes in package.json
-git add .
-git commit -am "chore: post publish"
-git push
