@@ -1,6 +1,6 @@
 {
   "name": "react-trailer",
-  "version": "0.0.1-beta.46+2e2b39c",
+  "version": "0.1.0-beta.0",
   "description": "VideoPlayer component for React",
   "main": "dist/index.js",
   "files": [
