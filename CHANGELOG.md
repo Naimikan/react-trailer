@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/Naimikan/react-trailer/compare/v1.1.1...v1.1.2) (2020-05-23)
+
+
+### Bug Fixes
+
+* added sub modules ([c681098](https://github.com/Naimikan/react-trailer/commit/c6810981baf198f4b2c951c1fc95ca46ad840014))
+
 ### [1.1.1](https://github.com/Naimikan/react-trailer/compare/v1.1.0...v1.1.1) (2020-05-22)
 
 
