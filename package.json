@@ -15,8 +15,7 @@
     "postrelease": "run-s release:*",
     "release:tags": "git push --follow-tags origin master",
     "release:github": "conventional-github-releaser -p angular",
-    "release:publish": "cp ./package.json build/package.json && npm publish build/",
-    "prepublishOnly": "npm run build"
+    "release:publish": "npm run build && cp ./package.json build/package.json && cp ./README.md build/README.md && cd build && npm publish"
   },
   "repository": {
     "type": "git",
