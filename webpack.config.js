@@ -2,17 +2,19 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
-const babelConfig = require(path.resolve(__dirname, '../babel.config.js')); // eslint-disable-line import/no-dynamic-require
+const getEntriesByPath = require('./scripts/get-entries-by-path');
 
-const sourcePath = path.resolve(__dirname, '../src');
-const buildPath = path.resolve(__dirname, '../build');
+const babelConfig = require(path.resolve(__dirname, './babel.config.js')); // eslint-disable-line import/no-dynamic-require
+
+const sourcePath = path.resolve(__dirname, './src');
+const buildPath = path.resolve(__dirname, './build');
 
 module.exports = {
   mode: 'production',
-  entry: `${sourcePath}/index.js`,
+  entry: getEntriesByPath(sourcePath),
   output: {
     path: buildPath,
-    filename: 'react-trailer.js',
+    filename: '[name].js',
     library: 'react-trailer',
     libraryTarget: 'commonjs2',
   },
