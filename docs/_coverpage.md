@@ -1,4 +1,4 @@
-# react-trailer <small>1.1.2</small>
+# react-trailer
 
 [![](https://img.shields.io/npm/v/react-trailer.svg)](https://www.npmjs.com/package/react-trailer)
 
