@@ -30,7 +30,7 @@ import {
 
 <VideoPlayer>
   <Viewer>
-    <Viewer.Source src="<YOUR_VIDEO_PATH_OR_URL>" type="<TYPE_OF_VIDEO>" />
+    <Viewer.Source src="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm" />
   </Viewer>
   <Controls>
     <ProgressControl />
