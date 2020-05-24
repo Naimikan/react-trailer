@@ -6,4 +6,4 @@
 - Fully customizable.
 
 [GitHub](https://github.com/Naimikan/react-trailer/)
-[Get Started](#get-started)
+[Documentation](#react-trailer)

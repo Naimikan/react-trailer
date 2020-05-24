@@ -1,3 +1,3 @@
 - Quick start
-  - [Installation](pages/quick-start.md?id=installation)
-  - [Usage](pages/quick-start.md?id=usage)
+  - [Installation](quick-start.md?id=installation)
+  - [Usage](quick-start.md?id=usage)
