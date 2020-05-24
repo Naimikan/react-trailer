@@ -25,6 +25,6 @@ import {
 
 // or import only the needed components
 
-import VideoPlayer from 'react-trailer/video-player';
+import VideoPlayer from 'react-trailer/player';
 import Viewer from 'react-trailer/viewer';
 ```
