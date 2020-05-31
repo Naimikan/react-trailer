@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Naimikan/react-trailer/compare/v1.1.2...v1.2.0) (2020-05-31)
+
+
+### Features
+
+* added docs ([c1e6c3b](https://github.com/Naimikan/react-trailer/commit/c1e6c3b3ef0b901de33a6e665ecc52dfa75a1074))
+* added docz ([a46dcab](https://github.com/Naimikan/react-trailer/commit/a46dcabf21c4a28e0fec6900fd5143e3ac90678f))
+* added support for tracks, poster and controls ([5f7c518](https://github.com/Naimikan/react-trailer/commit/5f7c5185d217ef29ace2ae80c37821a10b08cd03))
+
+
+### Bug Fixes
+
+* added netlify ([52d9b12](https://github.com/Naimikan/react-trailer/commit/52d9b12405bdd25417d9b0c3bbd11f46ed553c98))
+* changed docs ([c801e29](https://github.com/Naimikan/react-trailer/commit/c801e292273c65e73c75e8f1e035555379107575))
+* docz ([c7364ac](https://github.com/Naimikan/react-trailer/commit/c7364ac2474bab538cddd8ae96df76fd785af87c))
+* fixed cover page ([ff6c5df](https://github.com/Naimikan/react-trailer/commit/ff6c5df50d832121279aeb328823f99492454afb))
+* fixed docs ([78954aa](https://github.com/Naimikan/react-trailer/commit/78954aa658c09117e4d9a622caa907cce5a1dc83))
+* fixed hash in url ([a9ed01d](https://github.com/Naimikan/react-trailer/commit/a9ed01d2b67560407c61d6675cc3675af096cfce))
+* fixed url ([8643ecb](https://github.com/Naimikan/react-trailer/commit/8643ecb4cc8e408df2ecfff73bd1155201f5362d))
+
 ### [1.1.2](https://github.com/Naimikan/react-trailer/compare/v1.1.1...v1.1.2) (2020-05-23)
 
 
