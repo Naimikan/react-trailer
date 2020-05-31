@@ -1,0 +1,52 @@
+---
+name: Examples
+route: /examples
+---
+
+import { Playground } from 'docz';
+
+import {
+  VideoPlayer,
+  Viewer,
+  Controls,
+  PlayButton,
+  FullscreenButton,
+  ProgressControl,
+  DurationControl,
+} from '../../src/index';
+
+# Examples
+
+## Using native controls
+
+<Playground>
+  <VideoPlayer>
+    <Viewer
+      url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
+      nativeControls
+    />
+  </VideoPlayer>
+</Playground>
+
+## Custom poster
+
+<Playground>
+  <VideoPlayer>
+    <Viewer
+      url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
+      poster="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
+      nativeControls
+    />
+  </VideoPlayer>
+</Playground>
+
+## Using multiples sources
+
+<Playground>
+  <VideoPlayer>
+    <Viewer nativeControls>
+      <Viewer.Source src="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm" />
+      <Viewer.Source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+    </Viewer>
+  </VideoPlayer>
+</Playground>

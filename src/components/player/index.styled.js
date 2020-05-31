@@ -10,27 +10,21 @@ const VideoPlayer = styled(LogicVideoPlayer)`
   position: relative;
   
   ${({ height, width }) => `
-    height: ${height}px;
-    width: ${width}px;
+    ${height ? `height: ${height};` : ''}
+    ${width ? `width: ${width};` : ''}
   `}
 `;
 
 VideoPlayer.propTypes = {
   ...LogicVideoPlayer.propTypes,
-  width: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]),
-  height: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]),
+  width: PropTypes.string,
+  height: PropTypes.string,
 };
 
 VideoPlayer.defaultProps = {
   ...LogicVideoPlayer.defaultProps,
-  width: 600,
-  height: 480,
+  width: '',
+  height: '',
 };
 
 export default VideoPlayer;
