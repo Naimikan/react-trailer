@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/Naimikan/react-trailer/compare/v1.2.1...v1.2.2) (2020-05-31)
+
+
+### Bug Fixes
+
+* added google analytics ([9642e7f](https://github.com/Naimikan/react-trailer/commit/9642e7f38ff13754cdc6a209e48db59b95c08f68))
+
 ### [1.2.1](https://github.com/Naimikan/react-trailer/compare/v1.2.0...v1.2.1) (2020-05-31)
 
 
