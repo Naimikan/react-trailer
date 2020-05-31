@@ -29,7 +29,7 @@ const useFullscreenMode = (element) => {
     return () => {
       window.removeEventListener('fullscreenchange', onFullscreenChange);
     };
-  }, []);
+  }, [onFullscreenChange]);
 
   return [isFullscreen, toggleFullscreen];
 };
