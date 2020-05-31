@@ -1,6 +1,6 @@
 {
   "name": "react-trailer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Video Player for React",
   "main": "index.js",
   "files": [

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/Naimikan/react-trailer/compare/v1.2.0...v1.2.1) (2020-05-31)
+
+
+### Bug Fixes
+
+* fixed hook2 ([a8b5fc5](https://github.com/Naimikan/react-trailer/commit/a8b5fc55b6c013c54250071433521c8d3159f6e0))
+
 ## [1.2.0](https://github.com/Naimikan/react-trailer/compare/v1.1.2...v1.2.0) (2020-05-31)
 
 
