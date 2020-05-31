@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import VideoSource from './source';
+import VideoTrack from './track';
 
 import useVideoRef from '../../hooks/use-video-ref';
 import useFullscreenMode from '../../hooks/use-fullscreen-mode';
@@ -12,6 +13,8 @@ const Viewer = ({
   loop,
   className,
   url,
+  poster,
+  nativeControls,
   children,
 }) => {
   const [videoRef, setVideoRef] = useVideoRef();
@@ -44,6 +47,8 @@ const Viewer = ({
       ref={videoRefCallback}
       {...srcAttibutte}
       preload="metadata"
+      poster={poster}
+      controls={nativeControls}
       onClick={onClick}
       onDoubleClick={toggleFullscreen}
     >
@@ -53,6 +58,7 @@ const Viewer = ({
 };
 
 Viewer.Source = VideoSource;
+Viewer.Track = VideoTrack;
 
 Viewer.propTypes = {
   autoplay: PropTypes.bool,
@@ -60,6 +66,8 @@ Viewer.propTypes = {
   muted: PropTypes.bool,
   className: PropTypes.string,
   url: PropTypes.string,
+  poster: PropTypes.string,
+  nativeControls: PropTypes.bool,
   // ToDo: custom validator
   children: PropTypes.node,
 };
@@ -70,6 +78,8 @@ Viewer.defaultProps = {
   muted: false,
   className: '',
   url: '',
+  poster: '',
+  nativeControls: false,
   children: null,
 };
 
