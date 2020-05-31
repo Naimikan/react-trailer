@@ -6,7 +6,6 @@ export default {
   menu: ['Getting Started', 'Theming', 'API', 'Examples'],
   files: '**/*.mdx',
   port: 4509,
-  base: '/docs',
   // https://github.com/pedronauck/docz/issues/777#issuecomment-489947783
   filterComponents: files => files.filter(filepath => /w*.(js|jsx|ts|tsx)$/.test(filepath)),
 };
