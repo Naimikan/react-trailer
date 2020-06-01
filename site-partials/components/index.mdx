@@ -1,0 +1,33 @@
+---
+name: Components
+route: /components
+---
+
+import { Props } from 'docz';
+
+import Code from '../../docz/code/index';
+
+import { VideoPlayer } from '../../src/index';
+
+# Components
+---
+
+## `VideoPlayer`
+
+`VideoPlayer` is the component that comunicate all the components with the HTML5 video API. Internally, it's a provider.
+
+<Code>
+  {`
+import { VideoPlayer, Viewer } from 'react-trailer';\n
+<VideoPlayer>
+  <Viewer
+    url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
+    nativeControls
+  />
+</VideoPlayer>
+  `.trim()}
+</Code>
+
+### Properties
+
+<Props of={VideoPlayer} />

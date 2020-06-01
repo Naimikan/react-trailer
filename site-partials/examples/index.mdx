@@ -50,3 +50,26 @@ import {
     </Viewer>
   </VideoPlayer>
 </Playground>
+
+## Add VTT files
+
+<Playground>
+  <VideoPlayer>
+    <Viewer nativeControls>
+      <Viewer.Source src="https://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4" type="video/mp4" />
+      <Viewer.Track
+        kind="captions"
+        srclang="en"
+        label="English"
+        src="/public/vtt/elephantsdream/captions.en.vtt"
+        default
+      />
+      <Viewer.Track
+        kind="captions"
+        srclang="ja"
+        label="Japanese"
+        src="/public/vtt/elephantsdream/captions.ja.vtt"
+      />
+    </Viewer>
+  </VideoPlayer>
+</Playground>

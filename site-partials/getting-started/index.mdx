@@ -7,8 +7,9 @@ import { Playground } from 'docz';
 
 import { VideoPlayer, Viewer } from '../../src/index';
 import VersionTag from '../../docz/version-tag/index';
+import Code from '../../docz/code/index';
 
-import { name, version } from '../../package.json';
+import { name, version, peerDependencies } from '../../package.json';
 
 # react-trailer <VersionTag version={version} name={name} />
 
@@ -16,21 +17,21 @@ react-trailer is a wrapper around HTML5 video API that allows you to render vide
 
 ## Installation
 
+First of all, install the following **peer dependencies**:
+
+<Code language="bash">{`npm i ${Object.keys(peerDependencies).join(' ')}`}</Code>
+
 To add the library to your project you can either use a CDN service:
 
-```html
-<script src="https://unpkg.com/react-trailer@1.2.1/index.js"></script>
-```
+<Code language="html">{`<script src="https://unpkg.com/${name}@${version}/index.js"></script>`}</Code>
 
-Or npm/yarn to install the library from npm registry:
+Or npm to install the library from npm registry:
 
-```bash
-# With npm:
-npm install --save react-trailer
+<Code language="bash">{`npm i --save ${name}`}</Code>
 
-# With yarn:
-yarn add react-trailer
-```
+Or if you prefer yarn:
+
+<Code language="bash">{`yarn add ${name}`}</Code>
 
 ## Demo
 
@@ -43,19 +44,20 @@ yarn add react-trailer
 
 ## Usage
 
-```jsx
-import { VideoPlayer, Viewer } from 'react-trailer';
-
+<Code language="jsx">
+  {`
+import { VideoPlayer, Viewer } from 'react-trailer';\n
 <VideoPlayer>
   <Viewer
     url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
     nativeControls
   />
 </VideoPlayer>
-```
+  `.trim()}
+</Code>
 
 ## Development
 
-```bash
-npm i && npm start
-```
+<Code language="bash">
+  npm i && npm start
+</Code>
