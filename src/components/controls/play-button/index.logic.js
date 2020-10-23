@@ -1,14 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import useVideoRef from '../../../hooks/use-video-ref';
+
+import PlayIcon from './play-icon';
+import PauseIcon from './pause-icon';
 
 const PlayButton = ({ className, children }) => {
   const [videoRef] = useVideoRef();
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const childrenToRender = children && children.constructor === Function ? children : () => children;
+  let childrenToRender;
 
+  if (children && children !== null) {
+    childrenToRender = children.constructor === Function ? children : () => children;
+  } else {
+    // eslint-disable-next-line react/prop-types
+    childrenToRender = ({ isPlaying: isPlayingParam }) => (
+      <Fragment>
+        {isPlayingParam && <PauseIcon />}
+        {!isPlayingParam && <PlayIcon />}
+      </Fragment>
+    );
+  }
 
   useEffect(() => {
     if (videoRef) {
@@ -31,7 +45,7 @@ const PlayButton = ({ className, children }) => {
   };
 
   return (
-    <button className={`rtr-player__play-button ${className}`} type="button" onClick={playPause}>
+    <button className={`rtr-player__play-button ${className}`} onClick={playPause}>
       {childrenToRender({ isPlaying })}
     </button>
   );

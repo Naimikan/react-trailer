@@ -41,7 +41,6 @@ DurationControl.propTypes = {
 
 DurationControl.defaultProps = {
   className: '',
-  // eslint-disable-next-line react/prop-types
   children: DefaultDuration,
 };
 

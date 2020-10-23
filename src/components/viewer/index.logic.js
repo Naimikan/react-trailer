@@ -5,7 +5,6 @@ import VideoSource from './source';
 import VideoTrack from './track';
 
 import useVideoRef from '../../hooks/use-video-ref';
-import useFullscreenMode from '../../hooks/use-fullscreen-mode';
 
 const Viewer = ({
   autoplay,
@@ -18,7 +17,6 @@ const Viewer = ({
   children,
 }) => {
   const [videoRef, setVideoRef] = useVideoRef();
-  const [, toggleFullscreen] = useFullscreenMode(videoRef);
 
   const videoRefCallback = useCallback((node) => {
     if (node !== null) {
@@ -50,7 +48,6 @@ const Viewer = ({
       poster={poster}
       controls={nativeControls}
       onClick={onClick}
-      onDoubleClick={toggleFullscreen}
     >
       {children}
     </video>

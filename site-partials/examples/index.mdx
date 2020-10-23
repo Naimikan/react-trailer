@@ -5,13 +5,7 @@ route: /examples
 
 import { Playground } from 'docz';
 
-import {
-  VideoPlayer,
-  Viewer,
-  Controls,
-  PlayButton,
-  FullscreenButton,
-  ProgressControl,
+import VideoPlayer, {
   DurationControl,
 } from '../../src/index';
 
@@ -21,7 +15,7 @@ import {
 
 <Playground>
   <VideoPlayer>
-    <Viewer
+    <VideoPlayer.Viewer
       url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
       nativeControls
     />
@@ -32,7 +26,7 @@ import {
 
 <Playground>
   <VideoPlayer>
-    <Viewer
+    <VideoPlayer.Viewer
       url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
       poster="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
       nativeControls
@@ -44,10 +38,10 @@ import {
 
 <Playground>
   <VideoPlayer>
-    <Viewer nativeControls>
-      <Viewer.Source src="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm" />
-      <Viewer.Source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-    </Viewer>
+    <VideoPlayer.Viewer nativeControls>
+      <VideoPlayer.Viewer.Source src="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm" />
+      <VideoPlayer.Viewer.Source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+    </VideoPlayer.Viewer>
   </VideoPlayer>
 </Playground>
 
@@ -55,21 +49,32 @@ import {
 
 <Playground>
   <VideoPlayer>
-    <Viewer nativeControls>
-      <Viewer.Source src="https://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4" type="video/mp4" />
-      <Viewer.Track
+    <VideoPlayer.Viewer nativeControls>
+      <VideoPlayer.Viewer.Source src="https://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4" type="video/mp4" />
+      <VideoPlayer.Viewer.Track
         kind="captions"
         srclang="en"
         label="English"
         src="/public/vtt/elephantsdream/captions.en.vtt"
         default
       />
-      <Viewer.Track
+      <VideoPlayer.Viewer.Track
         kind="captions"
         srclang="ja"
         label="Japanese"
         src="/public/vtt/elephantsdream/captions.ja.vtt"
       />
-    </Viewer>
+    </VideoPlayer.Viewer>
+  </VideoPlayer>
+</Playground>
+
+## Controls
+
+<Playground>
+  <VideoPlayer>
+    <VideoPlayer.Viewer
+      url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
+    />
+    <VideoPlayer.Controls />
   </VideoPlayer>
 </Playground>

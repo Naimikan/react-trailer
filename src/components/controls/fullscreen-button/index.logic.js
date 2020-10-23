@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import useVideoRef from '../../../hooks/use-video-ref';
+import useVideoPlayerRef from '../../../hooks/use-video-player-ref';
 import useFullscreenMode from '../../../hooks/use-fullscreen-mode';
 
-const FullscreenButton = ({ className, children }) => {
-  const [videoRef] = useVideoRef();
-  const [isFullscreen, toggleFullscreen] = useFullscreenMode(videoRef);
+import FullscreenIcon from './fullscreen-icon';
+import FullscreenExitIcon from './fullscreen-exit-icon';
 
-  const childrenToRender = children && children.constructor === Function ? children : () => children;
+const FullscreenButton = ({ className, children }) => {
+  const [videoPlayerRef] = useVideoPlayerRef();
+  const [isFullscreen, toggleFullscreen] = useFullscreenMode(videoPlayerRef);
+
+  let childrenToRender;
+
+  if (children && children !== null) {
+    childrenToRender = children.constructor === Function ? children : () => children;
+  } else {
+    // eslint-disable-next-line react/prop-types
+    childrenToRender = ({ isFullscreen: isFullscreenParam }) => (
+      <Fragment>
+        {isFullscreenParam && <FullscreenExitIcon />}
+        {!isFullscreenParam && <FullscreenIcon />}
+      </Fragment>
+    );
+  }
 
   return (
     <button className={`rtr-player__fullscreen-button ${className}`} onClick={toggleFullscreen}>

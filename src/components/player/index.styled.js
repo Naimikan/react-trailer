@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 import LogicVideoPlayer from './index.logic';
 
 const VideoPlayer = styled(LogicVideoPlayer)`
-  background-color: #333;
-  box-sizing: border-box;
-  display: block;
-  position: relative;
-  
   ${({ height, width }) => `
     ${height ? `height: ${height};` : ''}
     ${width ? `width: ${width};` : ''}

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
-import VideoContext from '../../context';
+import VideoRefContext from '../../context/video-ref';
 
-const useVideoRef = () => useContext(VideoContext);
+const useVideoRef = () => useContext(VideoRefContext);
 
 export default useVideoRef;

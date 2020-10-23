@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import VideoContext from '../../context';
+import VideoPlayerRefContext from '../../context/video-player-ref';
+import VideoRefContext from '../../context/video-ref';
 
-const VideoPlayer = React.forwardRef(({
+import Container from './container';
+import Viewer from '../viewer';
+import Controls from '../controls';
+
+const VideoPlayer = ({
   className,
   children,
-}, ref) => (
-  <VideoContext.Provider value={useState()}>
-    <div ref={ref} className={`rtr-player ${className}`}>
-      {children}
-    </div>
-  </VideoContext.Provider>
-));
+}) => (
+  <VideoPlayerRefContext.Provider value={useState()}>
+    <VideoRefContext.Provider value={useState()}>
+      <Container className={className}>
+        {children}
+      </Container>
+    </VideoRefContext.Provider>
+  </VideoPlayerRefContext.Provider>
+);
+
+VideoPlayer.Viewer = Viewer;
+VideoPlayer.Controls = Controls;
 
 VideoPlayer.propTypes = {
   className: PropTypes.string,
