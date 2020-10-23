@@ -14,6 +14,7 @@ const Viewer = ({
   url,
   poster,
   nativeControls,
+  preload,
   children,
 }) => {
   const [videoRef, setVideoRef] = useVideoRef();
@@ -44,7 +45,7 @@ const Viewer = ({
       loop={loop}
       ref={videoRefCallback}
       {...srcAttibutte}
-      preload="metadata"
+      preload={preload}
       poster={poster}
       controls={nativeControls}
       onClick={onClick}
@@ -65,6 +66,7 @@ Viewer.propTypes = {
   url: PropTypes.string,
   poster: PropTypes.string,
   nativeControls: PropTypes.bool,
+  preload: PropTypes.oneOf(['auto', 'metadata', 'none']),
   // ToDo: custom validator
   children: PropTypes.node,
 };
@@ -77,6 +79,7 @@ Viewer.defaultProps = {
   url: '',
   poster: '',
   nativeControls: false,
+  preload: 'auto',
   children: null,
 };
 
