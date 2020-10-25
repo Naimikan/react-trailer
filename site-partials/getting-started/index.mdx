@@ -5,7 +5,7 @@ route: /
 
 import { Playground } from 'docz';
 
-import { VideoPlayer, Viewer } from '../../src/index';
+import VideoPlayer from '../../src/index';
 import VersionTag from '../../docz/version-tag/index';
 import Code from '../../docz/code/index';
 
@@ -36,7 +36,7 @@ Or if you prefer yarn:
 ## Demo
 
 <VideoPlayer>
-  <Viewer
+  <VideoPlayer.Viewer
     url="https://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4"
     nativeControls
   />
@@ -46,9 +46,9 @@ Or if you prefer yarn:
 
 <Code language="jsx">
   {`
-import { VideoPlayer, Viewer } from 'react-trailer';\n
+import VideoPlayer from 'react-trailer';\n
 <VideoPlayer>
-  <Viewer
+  <VideoPlayer.Viewer
     url="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
     nativeControls
   />
@@ -58,6 +58,20 @@ import { VideoPlayer, Viewer } from 'react-trailer';\n
 
 ## Development
 
+First, install the dependencies:
+
 <Code language="bash">
-  npm i && npm start
+  npm install
+</Code>
+
+Build the code:
+
+<Code language="bash">
+  npm run build
+</Code>
+
+Start the playground:
+
+<Code language="bash">
+  npm start
 </Code>

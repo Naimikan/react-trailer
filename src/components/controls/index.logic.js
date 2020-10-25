@@ -6,6 +6,7 @@ import Duration from './duration';
 import FullscreenButton from './fullscreen-button';
 import Progress from './progress';
 import VolumeControl from './volume';
+import VolumeSliderControl from './volume-slider';
 import PictureInPictureButton from './picture-in-picture';
 
 const Controls = ({
@@ -23,10 +24,11 @@ const Controls = ({
         <div className="rtr-player__controls-wrapper">
           <div className="rtr-player__controls-left">
             <PlayButton />
-            <VolumeControl />
-            <Duration />
           </div>
           <div className="rtr-player__controls-right">
+            <VolumeControl />
+            <VolumeSliderControl />
+            <Duration />
             <PictureInPictureButton />
             <FullscreenButton />
           </div>
@@ -47,6 +49,7 @@ Controls.Duration = Duration;
 Controls.FullscreenButton = FullscreenButton;
 Controls.Progress = Progress;
 Controls.Volume = VolumeControl;
+Controls.VolumeSlider = VolumeSliderControl;
 Controls.PictureInPictureButton = PictureInPictureButton;
 
 Controls.propTypes = {
